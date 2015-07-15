@@ -1,0 +1,194 @@
+% Document type and used packages
+\documentclass[a4paper,11pt,headings=normal]{scrartcl}
+\usepackage[utf8]{inputenc}       % Allow for UTF-8 files to 
+\usepackage{graphicx}             % Include graphics into document
+\usepackage[ngerman]{babel}       % German hyphenation
+\usepackage{color}                % Color support
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage[printonlyused]{acronym}
+\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage[pagebackref=false]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage[scaled]{helvet}
+\usepackage[hang,font={sf,footnotesize},labelfont={footnotesize,bf}]{caption}
+
+\makeindex
+
+\addtokomafont{subsubsection}{\itshape\bfseries\small}
+\addtokomafont{paragraph}{\bfseries\small}
+
+\definecolor{linkblue}{RGB}{0, 0, 100}
+
+\hypersetup{
+    colorlinks=true,
+%    allcolors=linkblue,
+    linktoc=all,
+    linkcolor=linkblue,
+    citecolor=linkblue, 
+	filecolor=linkblue,
+	urlcolor	=linkblue
+}
+
+\setlength{\parskip}{0.2cm}
+\setlength{\parindent}{0mm}
+
+%\setlength{\parskip}{0.2cm}
+%\setlength{\parindent}{0mm}
+%\setlength{\parindent}{3mm}
+%\setlength{\topmargin}{1.2cm}
+%\setlength{\headsep}{0.1cm}
+%\setlength{\headheight}{0.1cm}
+%\setlength{\topskip}{0.1cm}
+%\setlength{\textheight}{20.8cm}
+\clubpenalty = 10000   % Keine "Schusterjungen"
+
+%\newcommand{\changefont}[3]{
+%\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+
+% Keine "Hurenkinder"
+\widowpenalty = 10000 
+\displaywidowpenalty = 10000
+
+% PDF meta data
+\pdfinfo{
+          /Title      (Typische Fehler in schriftlichen Arbeiten)
+          /Author     (Thomas Smits)
+          /Keywords   (Bachelor-Arbeit Master-Arbeit Thesis Leitfaden Hochschule Mannheim)
+ }
+
+\graphicspath{{images/}}
+
+\newcommand{\changefont}[3]{
+\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+
+\begin{document}
+
+\changefont{ptm}{m}{n}  % Times New Roman
+
+\pagenumbering{roman}
+\titlehead{\includegraphics[trim = 5.5mm 210mm 0mm 0mm, clip, width=6cm]{logo_hs}\\ Fakultät für Informatik\\ Institut für Unternehmens- und Wirtschaftsinformatik \\ \vspace{2cm}}
+
+%\subject{Whitepaper}
+\title{Typische Fehler in schriftlichen Arbeiten}
+\author{Prof. Thomas Smits}
+\date{\small{Januar 2014}}
+\renewcommand*{\titlepagestyle}{empty}
+
+\newpage
+\pagenumbering{arabic}
+{\huge \textbf{Typische Fehler in schriftlichen Arbeiten}}
+
+Prof. Thomas Smits -- 13.01.2014
+
+In schriftlichen Ausarbeitungen kommt es immer wieder zu typischen Fehlern, die bei der Korrektur der Arbeit auffallen. Um die Korrektur zu vereinfachen und zusätzlich den Studierenden eine Handreichung zu geben, soll dieses Dokument dienen.
+
+\section{Typographie}
+
+\subsection*{T1 -- Abkürzungen von zwei und mehr Worten}
+
+Abkürzungen, die aus zwei Worten bestehen (zum Beispiel, unter Anderem ...) haben ein geschütztes Leerzeichen zwischen den Buchstaben, die das jeweilige Wort abkürzen. In LaTeX bekommt man dieses Leerzeichen durch die Kombination \verb+\,+ in Word durch Shift-Leertaste.
+
+\textbf{Falsch:} z.B., u.a., s.u. \\
+\textbf{Richtig:} z.\,B., u.\,a, s.\,u.
+
+
+\subsection*{T2 -- Durchkoppeln von Nomen}
+
+Im Deutschen werden zusammengesetzte Nomen normalerweise zusammengeschrieben. Aus Gründen der Klarheit oder weil eines der Wort fremdsprachlichen Ursprungs ist, kann man auch einen Koppelstrich setzen (z.\,B. Quelltext-Verwaltung, Interrupt-Anforderung). Da im Englischen keine Koppelstriche verwendet werden, gilt dir Regel nicht, wenn \textit{alle} Nomen Englisch sind (z.\,B. Open Source).
+
+\textbf{Falsch:} Source-Code, Source Verwaltung, Internet Standard \\
+\textbf{Richtig:} Source Code, Source-Verwaltung, Internet-Standard
+
+
+\subsection*{T3 -- Hervorhebungen kursiv}
+
+Hervorhebungen erfolgen, indem man den Text \textit{kursiv} setzt. \textbf{Fettdruck} sollte in wissenschaftlichen Texten für Überschriften oder Beschriftungen von Bildern, Formeln etc. vorbehalten werden.
+
+
+\subsection*{T4 -- Hervorhebung neuer Begriffe}
+
+Wenn neue Begriffe eingeführt werden, bietet es sich an, diese bei der Definition kursiv zu setzen, damit der Leser beim Blick auf die Seite, diese schnell finden kann.
+
+
+\subsection*{T5 -- Striche}
+
+Es ist streng zu unterscheiden zwischen dem Koppelstrich (-), dem Bindestrich (--) und dem Auslassungsstrich (---). Koppelstriche verbinden Verben und stehen ohne Leerzeichen, Bindestriche verbinden Satzteile (ähnlich zu Klammern) und haben davor und danach ein Leerzeichen. Auslassungstriche tauchen im Literaturverzeichnis auf, wenn mehrere Quellen denselben Autor haben.
+
+\textbf{Richtig:} Source-Verwaltung ist -- besonders in größeren Projekten -- von besonderer Wichtigkeit.
+
+
+\subsubsection*{T6 - Beschriftung von Tabellen}
+
+Bilder, Quelltexte werden unterhalb beschriftet. Die Beschriftung von Tabellen erfolgt jedoch \textit{oberhalb} der Tabelle.
+
+
+\section{Rechtschreibung und Zeichensetzung}
+
+\subsection*{R1 -- Erweiterter Infinitiv mit um}
+
+Ein Erweiterter Infinitiv mit "`um"' wird immer durch ein Komma abgetrennt.
+
+\textbf{Falsch:} Er ging zu Hochschule um viel zu lernen. \\
+\textbf{Richtig:} Er ging zu Hochschule, um viel zu lernen.
+
+
+\subsection*{R2 -- Großschreibung substantivierter Verben}
+
+Substanstitierte Verben werden grundsätzlich mit großem Anfangsbuchstaben geschrieben.
+
+\textbf{Falsch:} Das schreiben der Bachelorarbeit ist anstrengend. \\
+\textbf{Richtig:} Das Schreiben der Bachelorarbeit ist anstrengend.
+
+
+\section{Form und Stil}
+
+\subsection*{F1 -- Alleinstehende Gliederungspunkte}
+
+Der Zweck einer Gliederung ist es, den Text zu gliedern, also in feinere Teile zu zerlegen. Daher kann auf einer Ebene ein Gliederungspunkt nicht alleine stehen, da er in diesem Fall nichts untergliedern würde.
+
+\textbf{Falsch:}
+\begin{verbatim}
+1.
+1.1
+1.1.1
+1.2
+1.2.1
+1.3
+\end{verbatim}
+Hier stehen die Punkte 1.1.1 und 1.2.1 alleine auf einer Ebene und gliedern damit nicht.
+
+
+\subsection*{F2 -- Wiederholungen}
+
+Wiederholungen von Wörtern sollten vermieden werden, da sie holperig klingen. Dies gilt allerdings nicht für den Forschungsgegenstand der Arbeit, der konsequent und durchgängig bei seinem Namen genannt werden sollte.
+
+\textbf{Falsch:} xxx. \\
+\textbf{Richtig:} xxx.
+
+
+\subsection*{F3 -- Unbelegte Aussagen}
+
+In einer wissenschaftlichen Arbeit müssen Aussagen belegt werden. Entweder durch eine eigene Argumentation oder aber durch verlässliche Quellen. Hiervon ausgenommen sind nur triviale, durch Alltagserfahrung belegte Tatsachen.
+
+\textbf{Falsch:} "`Apache ist der beliebteste Webserver."' \\
+\textbf{Richtig:} "`Laut [Netcraft2013] hat der Apache einen Marktanteil von 68\% und kann somit als beliebtester Webserver angesehen werden."'
+
+\section{Zitierweise}
+
+\subsection*{Z1 -- Seitenzahlen bei Zitate}
+
+Zitate und Quellenangaben sollten so genau wie möglich gegeben werden. Dies heißt insbesondere, dass (wann immer möglich) auch eine Seitenzahl angegeben wird. Bei kurzen Quellen (wenigen Seiten) kann eine Referenz auf die Seitenzahl entfallen.
+
+
+\subsection*{Z2 -- Quelle zu Definitionen}
+
+Wenn im Text eine Definition aus einer Quelle gebracht wird, sollte direkt danach die Quelle angegeben werden.
+
+\textbf{Richtig:} \textit{Muggles} sind Menschen ohne besondere Zauberkräfte [Rowling95, S. 145]. Im Gegensatz dazu sind \textit{Dementoren} keine Menschen sondern Untote, die sich vom Glück der Menschen ernähren [Rowling02, S. 230].
+
+\end{document}
