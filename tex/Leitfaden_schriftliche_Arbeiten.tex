@@ -8,7 +8,6 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{booktabs}
-\usepackage{natbib}
 \usepackage[printonlyused]{acronym}
 \usepackage{makeidx}
 \usepackage{fancyhdr}
@@ -16,6 +15,19 @@
 \usepackage[all]{hypcap}
 \usepackage[scaled]{helvet}
 \usepackage[hang,font={sf,footnotesize},labelfont={footnotesize,bf}]{caption}
+\usepackage[backend=biber,
+  isbn=false,                     % ISBN nicht anzeigen, gleiches geht mit nahezu allen anderen Feldern
+  sortlocale=de_DE,               % Sortierung der Einträge für Deutsch
+  autocite=inline,                % regelt Aussehen für \autocite
+                                  %      inline: Zitat in Klammern (\parancite)
+                                  %      footnote: Zitat in Fußnoten (\footcite)
+                                  %      plain: Zitat direkt ohne Klammern (\cite)
+  style=ieee,         		        % Legt den Stil für die Zitate fest
+                                  %      ieee: Zitate als Zahlen [1]
+                                  %      alphabetic: Zitate als Kürzel und Jahr [Ein05]
+                                  %      authoryear: Zitate Author und Jahr [Einstein (1905)]
+  hyperref=true,                  % Hyperlinks für Zitate
+]{biblatex}
 
 \makeindex
 
@@ -66,6 +78,9 @@
 \newcommand{\changefont}[3]{
 \fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
 
+% Literatur-Datenbank
+\addbibresource{sources.bib}   % BibLaTeX-Datei mit Literaturquellen einbinden
+
 \begin{document}
 
 \changefont{ptm}{m}{n}  % Times New Roman
@@ -77,7 +92,7 @@
 \title{Leitfaden für schriftliche Arbeiten \vspace{1cm}}
 \author{Prof. Thomas Smits \\ \small{Hochschule Mannheim} \\ \small{\texttt{t.smits@hs-mannheim.de}}}
 
-\date{\small{Oktober 2014}}
+\date{\small{April 2023}}
 \renewcommand*{\titlepagestyle}{empty}
 \maketitle[-2]
 \begin{abstract}
@@ -89,7 +104,7 @@
 \newpage
 \pagenumbering{arabic}
 \section{Einleitung}
-Es gibt viele Bücher zum Schreiben wissenschaftlicher Arbeiten (z.\,B. \cite{Kramer2009} oder \cite{Kornmeier2011}). Dieses Dokument soll nicht noch eine weitere Anleitung hinzufügen oder die existierenden Bücher ersetzen, sondern ist eine kurze Abhandlung über die Punkte, die dem Autor ganz besonders am Herzen liegen.
+Es gibt viele Bücher zum Schreiben wissenschaftlicher Arbeiten (z.\,B. \autocite{Kramer2009} oder \autocite{Kornmeier2011}). Dieses Dokument soll nicht noch eine weitere Anleitung hinzufügen oder die existierenden Bücher ersetzen, sondern ist eine kurze Abhandlung über die Punkte, die dem Autor ganz besonders am Herzen liegen.
 
 Der Hintergrund ist, dass gerade im Bereich der schriftlichen Form, der Sprache, der Zitate und Quellen, der Struktur oder der Logik häufig grobe Schnitzer passieren, die eine an sich gute Arbeit unnötig abwerten. Daher soll dieses Dokument Studierenden helfen, auf diese Punkte und die Erwartungen des Betreuers noch einmal besonders zu achten, um schlechte Bewertungen der Arbeit im Vorfeld zu vermeiden.
 
@@ -97,7 +112,7 @@ Der Hintergrund ist, dass gerade im Bereich der schriftlichen Form, der Sprache,
 \section{Form}
 
 \subsection{Schriftart}
-Die schriftliche Arbeit ist mit einem Computer anzufertigen und in einer für Fließtext geeigneten Schriftart\index{Schriftart} mit Serifen zu erstellen (z.\,B. Times, Palatino, Computer Modern).\footnote{Zur Auswahl der Schrift und ihrer Lesbarkeit siehe \cite{Willberg1999}, Seite 23ff.} Auf keinen Fall sollte eine serifenlose Schrift (Arial, Helvetica, Verdana, Tahoma, Gil Sans) für den Fließtext eingesetzt werden. Serifenlose Schriften können (und sollen) ausschließlich für Überschriften eingesetzt werden. Es sollen nur zwei verschiedene Schriftarten in der gesamten Arbeit benutzt werden, eine für Überschriften und eine für den Fließtext.
+Die schriftliche Arbeit ist mit einem Computer anzufertigen und in einer für Fließtext geeigneten Schriftart\index{Schriftart} mit Serifen zu erstellen (z.\,B. Times, Palatino, Computer Modern).\footnote{Zur Auswahl der Schrift und ihrer Lesbarkeit siehe \autocite{Willberg1999}, Seite 23ff.} Auf keinen Fall sollte eine serifenlose Schrift (Arial, Helvetica, Verdana, Tahoma, Gil Sans) für den Fließtext eingesetzt werden. Serifenlose Schriften können (und sollen) ausschließlich für Überschriften eingesetzt werden. Es sollen nur zwei verschiedene Schriftarten in der gesamten Arbeit benutzt werden, eine für Überschriften und eine für den Fließtext.
 
 Die Schriftgröße für den Fließtext beträgt 10, 11 oder 12 Punkt. Fußnoten werden entsprechend 1 bis 2 Punkt kleiner gesetzt.
 
@@ -110,11 +125,11 @@ Der Durchschuss\index{Durchschuss} (Zeilenabstand\index{Zeilenabstand|see{Durchs
 Absätze\index{Absatz} sind entweder durch einen entsprechenden Abstand (z.\,B. 2 mm) oder durch einen Einzug zu trennen.
 
 \subsection{Typographie}
-Achten Sie bitte auf die grundlegenden Regeln der Typographie\index{Typographie}\footnote{Ein Ratgeber in allen Detailfragen ist \cite{Forssman2002}.}, wenn Sie Ihren Text schreiben. Hierzu gehören z.\,B. die Verwendung der richtigen "`Anführungszeichen"' und der Unterschied zwischen Binde- (-) und Gedankenstrich (--).
+Achten Sie bitte auf die grundlegenden Regeln der Typographie\index{Typographie}\footnote{Ein Ratgeber in allen Detailfragen ist \autocite{Forssman2002}.}, wenn Sie Ihren Text schreiben. Hierzu gehören z.\,B. die Verwendung der richtigen "`Anführungszeichen"' und der Unterschied zwischen Binde- (-) und Gedankenstrich (--).
 
 Wenn Sie Text hervorheben wollen, dann setzten Sie ihn \textit{kursiv} (Italic) und nicht \textbf{fett} (Bold). Fettdruck ist Überschriften vorbehalten; im Fließtext stört er den Lesefluss. Das \underline{Unterstreichen} von Fließtext ist im gesamten Dokument tabu und kann maximal bei Pseudo-Code vorkommen.\index{Hervorhebungen}
 
-Tabellen werden normalerweise ohne vertikale Striche gesetzt, sondern die Spalten werden durch einen entsprechenden Abstand voneinander getrennt.\footnote{Siehe \cite{Willberg1999}, Seite 89.} Zum Einsatz kommen ausschließlich horizontale Linien (siehe Tabelle~\ref{tabellenbeispiel}).
+Tabellen werden normalerweise ohne vertikale Striche gesetzt, sondern die Spalten werden durch einen entsprechenden Abstand voneinander getrennt.\footnote{Siehe \autocite{Willberg1999}, Seite 89.} Zum Einsatz kommen ausschließlich horizontale Linien (siehe Tabelle~\ref{tabellenbeispiel}).
 
 \begin{table}
 \centering
@@ -150,7 +165,7 @@ Wenn Sie Ihre Arbeit auf Deutsch verfassen, gehen Sie sparsam mit englischen Aus
 
 Selbst bahnbrechende Werke mit einem komplexen wissenschaftlichen Inhalt können in einer gut verständlichen Sprache abgefasst sein, wie z.\,B. die Einleitung von Albert Einsteins epochalem Werk zur speziellen Relativitätstheorie zeigt:
 \begin{quote}\begin{small}
-"`Daß die Elektrodynamik Maxwells -- wie dieselbe gegenwärtig aufgefasst zu werden pflegt -- in ihrer Anwendung auf bewegte Körper zu Asymmetrien führt, welche den Phänomenen nicht anzuhaften scheinen, ist bekannt. Man denke z. B. an die elektrodynamische Wechselwirkung zwischen einem Magneten und einem Leiter. Das beobachtbare Phänomen hängt hier nur ab von der Relativbewegung von Leiter und Magnet, während nach der üblichen Auffassung die beiden Fälle, daß der eine oder der andere dieser Körper der bewegte sei, streng voneinander zu trennen sind. Bewegt sich nämlich der Magnet und ruht der Leiter, so entsteht in der Umgebung des Magneten ein elektrisches Feld von gewissem Energiewerte, welches an den Orten, wo sich Teile des Leiters befinden, einen Strom erzeugt."'\footnote{\cite{Einstein1905}}
+"`Daß die Elektrodynamik Maxwells -- wie dieselbe gegenwärtig aufgefasst zu werden pflegt -- in ihrer Anwendung auf bewegte Körper zu Asymmetrien führt, welche den Phänomenen nicht anzuhaften scheinen, ist bekannt. Man denke z. B. an die elektrodynamische Wechselwirkung zwischen einem Magneten und einem Leiter. Das beobachtbare Phänomen hängt hier nur ab von der Relativbewegung von Leiter und Magnet, während nach der üblichen Auffassung die beiden Fälle, daß der eine oder der andere dieser Körper der bewegte sei, streng voneinander zu trennen sind. Bewegt sich nämlich der Magnet und ruht der Leiter, so entsteht in der Umgebung des Magneten ein elektrisches Feld von gewissem Energiewerte, welches an den Orten, wo sich Teile des Leiters befinden, einen Strom erzeugt."'\footnote{\autocite{Einstein1905}}
 \end{small}\end{quote}
 
 \noindent Jede \ac{ABK}, die Sie benutzen, müssen Sie bei der ersten Verwendung definieren und in ein Abkürzungsverzeichnis am Ende der Arbeit aufnehmen. Davon ausgenommen sind nur \acp{ABK}, die im Duden stehen und bei denen man davon ausgehen kann, dass jeder Leser sie kennt, wie z.\,B. \textit{z.\,B.}
@@ -224,7 +239,7 @@ Generell sollten Sie mit wörtlichen Zitaten sparsam umgehen und diese auf wenig
 \subsection{Zitierfähigkeit}
 Alles was Sie zitieren\index{Zitat}, muss für den Leser (mit mehr oder weniger Aufwand) beschaffbar sein. Damit scheiden alle Quellen aus, die nicht öffentlich verfügbar sind also auch Diplom- und Bachelor-Arbeiten. Ein besonders Problem stellen dabei Internetquellen dar, da deren Verfügbarkeit nicht garantiert werden kann (siehe unten).
 
-Beachten Sie auch, dass nicht alle Quellen uneingeschränkt zitierfähig\index{Zitierfähigkeit} sind. Generell können Sie publizierte amtliche oder wissenschaftliche Texte zitieren, einschließlich Dissertationen. Nicht zitieren sollten Sie Tageszeitungen (z.\,B. Bild, Rhein-Neckar-Zeitung, Mannheimer Morgen) und Publikumszeitschriften (z.\,B. Stern, Spiegel).\footnote{Details zu diesen Regeln und eine Begründung finden Sie bei \cite{Kramer2009}, Seite 141ff.}
+Beachten Sie auch, dass nicht alle Quellen uneingeschränkt zitierfähig\index{Zitierfähigkeit} sind. Generell können Sie publizierte amtliche oder wissenschaftliche Texte zitieren, einschließlich Dissertationen. Nicht zitieren sollten Sie Tageszeitungen (z.\,B. Bild, Rhein-Neckar-Zeitung, Mannheimer Morgen) und Publikumszeitschriften (z.\,B. Stern, Spiegel).\footnote{Details zu diesen Regeln und eine Begründung finden Sie bei \autocite{Kramer2009}, Seite 141ff.}
 
 \subsection{Zitierweise}
 Verwenden Sie eine einheitliche und im gesamten Dokument konsequent durchgehaltene Zitierweise\index{Zitierweise}. Es gibt eine ganze Reihe von unterschiedlichen Standards für das Zitieren und den Aufbau eines Literaturverzeichnisses. Sie können entweder mit Fußnoten oder Kurzbelegen im Text arbeiten. Welches Verfahren Sie einsetzen ist Ihnen überlassen, nur müssen Sie es konsequent durchhalten.
@@ -234,7 +249,7 @@ In der Informatik ist das Zitieren mit Kurzbelegen\index{Zitat!Kurzbeleg} im Tex
 Denken Sie daran, dass das Übernehmen einer fremden Textstelle ohne entsprechenden Hinweis auf die Herkunft in wissenschaftlichen Arbeiten nicht akzeptabel ist und dazu führen kann, dass die Arbeit nicht anerkannt wird. Plagiate\index{Plagiat!Bewertung} werden mit mangelhaft (5,0) bewertet und können weitere rechtliche Schritte nach sich ziehen.
 
 \subsection{Zitieren von Internetquellen}
-Internetquellen\index{Zitat!Internetquellen} sind normalerweise \textit{nicht} zitierfähig. Zum einen, weil sie nicht dauerhaft zur Verfügung stehen und damit für den Leser möglicherweise nicht beschaffbar sind und zum anderen, weil häufig der wissenschaftliche Anspruch fehlt.\footnote{Eine lesenswerte Abhandlung zu diesem Thema findet sich (im Internet) bei \cite{Weber2006}}
+Internetquellen\index{Zitat!Internetquellen} sind normalerweise \textit{nicht} zitierfähig. Zum einen, weil sie nicht dauerhaft zur Verfügung stehen und damit für den Leser möglicherweise nicht beschaffbar sind und zum anderen, weil häufig der wissenschaftliche Anspruch fehlt.\footnote{Eine lesenswerte Abhandlung zu diesem Thema findet sich (im Internet) bei \autocite{Weber2006}}
 
 Wenn ausnahmsweise doch eine Internetquelle zitiert werden muss, z.\,B. weil für eine Arbeit dort Informationen zu einem beschriebenen Unternehmen oder einer Technologie abgerufen wurden, sind folgende Punkte zu beachten:
 
@@ -256,7 +271,7 @@ Die Schlüsse und Ergebnisse in Ihrer Arbeit sollten logisch und nachprüfbar se
 
 \subsection{Logische Fehlschlüsse}
 \index{Logik!Fehlschlüsse}
-Oliver Stengel erläutert in \cite{Stengel2005} eine ganze Reihe von logischen Fehlschlüssen. Die folgenden schleichen sich häufig in schriftliche Arbeiten ein und Sie sollten explizit darauf achten, dass Ihnen keiner dieser Fehler unterläuft.
+Oliver Stengel erläutert in \autocite{Stengel2005} eine ganze Reihe von logischen Fehlschlüssen. Die folgenden schleichen sich häufig in schriftliche Arbeiten ein und Sie sollten explizit darauf achten, dass Ihnen keiner dieser Fehler unterläuft.
 
 \vspace{0.3cm}\noindent\textbf{Kausaler Fehlschluss}\index{Fehlschluss!kausaler} -- Es wird eine Kausalität zwischen Ereignissen gesehen, die nicht vorhanden ist.
   \begin{itemize}
@@ -274,13 +289,13 @@ Oliver Stengel erläutert in \cite{Stengel2005} eine ganze Reihe von logischen F
 \subsection{Falsifikation}
 \index{Falsifikation}
 
-Sie müssen generell unterscheiden zwischen Aussagen bezüglich eines einzelnen Ereignisses oder eines einzelnen Experiments (\textit{besondere Sätze}, \textit{Existenzaussage}\index{Satz!besonderer}\index{Allaussage}) und Hypothesen oder Theorien, die sich auf alle möglichen Experimente oder Ereignisse beziehen (\textit{allgemeine Sätze}, \textit{Allaussage}\index{Satz!allgemeiner}\index{Existenzaussage}).\footnote{Siehe \cite{Popper1969}, S.3}
+Sie müssen generell unterscheiden zwischen Aussagen bezüglich eines einzelnen Ereignisses oder eines einzelnen Experiments (\textit{besondere Sätze}, \textit{Existenzaussage}\index{Satz!besonderer}\index{Allaussage}) und Hypothesen oder Theorien, die sich auf alle möglichen Experimente oder Ereignisse beziehen (\textit{allgemeine Sätze}, \textit{Allaussage}\index{Satz!allgemeiner}\index{Existenzaussage}).\footnote{Siehe \autocite{Popper1969}, S.3}
 
 In den empirischen Wissenschaften ist es normalerweise nicht möglich einen allgemeinen Satz\index{Allaussage!beweisen} zu beweisen. Sie können z.\,B. kein Experiment konstruieren, das belegt, dass es \textit{keine} Einhörner gibt (Nichtexistenzbeweis). Sie können aber leicht ein Experiment ersinnen, das einen allgemeinen Satz widerlegt\index{Allaussage!widerlegen}. Sie müssen z.\,B. nur ein einziges Einhorn fangen um zu belegen, dass die Allaussage "`es gibt keine Einhörner"' falsch ist.
 
 Da man allgemeine Sätze nicht direkt beweisen kann, versucht man sie zu widerlegen (zu falsifizieren). D.\,h. man leitet aus den allgemeinen Sätzen besondere Sätze ab, die man im Experiment prüft. Mit jedem Experiment, in dem es  nicht gelingt die Allaussage zu widerlegen stärkt das Vertrauen in die Richtigkeit dieser Aussage. Sobald ein Experiment die Allaussage widerlegt hat, muss man sich auf die Suche nach einer neuen und besseren Theorie machen, die auch die Ergebnisse dieses Experiments erklären kann.
 
-Als Beispiel kann Newtons Gravitationsgesetz\footnote{Siehe hierzu z.\,B. \cite{Giancoli2010}, S.177~ff.} gelten. Mit Hilfe dieses Gesetzes kann man Vorhersagen über die Bahnen von Planeten machen, die sehr gut mit den all"-täg"-lich"-en Beobachtungen übereinstimmen. Nichtsdestotrotz kann es die Umlaufbahn des Merkur nicht korrekt vorhersagen, d.\,h. Experimente zur Messung der Merkurbahn (und damit zur Falsifizierung der Newtonschen Gesetze) haben gezeigt, dass Newtons Gravitationsgesetz nicht korrekt sein kann. Erst die allgemeine Relativitätstheorie Albert Einsteins konnte die Abweichungen der Bahn erklären.
+Als Beispiel kann Newtons Gravitationsgesetz\footnote{Siehe hierzu z.\,B. \autocite{Giancoli2010}, S.177~ff.} gelten. Mit Hilfe dieses Gesetzes kann man Vorhersagen über die Bahnen von Planeten machen, die sehr gut mit den all"-täg"-lich"-en Beobachtungen übereinstimmen. Nichtsdestotrotz kann es die Umlaufbahn des Merkur nicht korrekt vorhersagen, d.\,h. Experimente zur Messung der Merkurbahn (und damit zur Falsifizierung der Newtonschen Gesetze) haben gezeigt, dass Newtons Gravitationsgesetz nicht korrekt sein kann. Erst die allgemeine Relativitätstheorie Albert Einsteins konnte die Abweichungen der Bahn erklären.
 
 Berücksichtigen Sie bitte das hier beschriebene Modell, wenn Sie in Ihrer Arbeit allgemeine Sätze aufstellen (z.\,B. "`beim Wechsel von 32bit auf 64bit steigt der Speicherverbrauch einer Java-VM"') und versuchen Sie Ihre Aussagen durch die Ableitung und experimentelle Prüfung besonderer Sätze zu falsifizieren. Verfallen Sie nicht den oben beschriebenen Logikfehlern, aus besonderen Sätzen Allaussagen abzuleiten (Induktiver Fehlschluss).
 
@@ -289,7 +304,7 @@ Berücksichtigen Sie bitte das hier beschriebene Modell, wenn Sie in Ihrer Arbei
 
 Generell spielen viele Kriterien bei der Bewertung einer Abschlussarbeit eine Rolle und Arbeiten unterscheiden sich je nach Themenstellung zum Teil erheblich. Daher ist es nur schwer möglich ein einheitliches Bewertungsschema anzuwenden, sondern die Kriterien müssen auch an das jeweilige Projekt angepasst werden.
 
-Kornmeier stellt in [\cite{Kornmeier2011}, S. 34] einige Kriterien zusammen, die sich an Inhalt, Stil und Form orientieren, hierbei werden die drei Bereiche unterschiedlich gewichtet:
+Kornmeier stellt in [\autocite{Kornmeier2011}, S. 34] einige Kriterien zusammen, die sich an Inhalt, Stil und Form orientieren, hierbei werden die drei Bereiche unterschiedlich gewichtet:
 
 \begin{itemize}
   \item Inhalt (ca 70\%)
@@ -329,8 +344,7 @@ Weiterhin ist es dringend zu empfehlen während der Erstellung der schriftlichen
 
 \newpage
 \addcontentsline{toc}{section}{Literatur}
-\bibliographystyle{dinat}
-\bibliography{sources}
+\printbibliography
 
 \printindex
 \addcontentsline{toc}{section}{Index}
