@@ -103,16 +103,20 @@
 
 \newpage
 \pagenumbering{arabic}
+
 \section{Einleitung}
-Es gibt viele Bücher zum Schreiben wissenschaftlicher Arbeiten (z.\,B. \autocite{Kramer2009} oder \autocite{Kornmeier2011}). Dieses Dokument soll nicht noch eine weitere Anleitung hinzufügen oder die existierenden Bücher ersetzen, sondern ist eine kurze Abhandlung über die Punkte, die dem Autor ganz besonders am Herzen liegen.
+Es gibt viele Quellen zum Schreiben wissenschaftlicher Arbeiten (z.\,B. \autocite{Kramer2009} oder \autocite{Kornmeier2011}). Dieses Dokument soll nicht noch eine weitere Anleitung hinzufügen oder die existierenden Bücher ersetzen, sondern ist eine kurze Abhandlung über die Punkte, die dem Autor ganz besonders am Herzen liegen.
 
 Der Hintergrund ist, dass gerade im Bereich der schriftlichen Form, der Sprache, der Zitate und Quellen, der Struktur oder der Logik häufig grobe Schnitzer passieren, die eine an sich gute Arbeit unnötig abwerten. Daher soll dieses Dokument Studierenden helfen, auf diese Punkte und die Erwartungen des Betreuers noch einmal besonders zu achten, um schlechte Bewertungen der Arbeit im Vorfeld zu vermeiden.
 
 
 \section{Form}
 
+\subsection{Template}
+Es gibt ein, inzwischen sehr ausgereiftes, Template für das Schreiben wissenschaftlicher Arbeiten mit \LaTeX, das unter \url{https://github.com/informatik-mannheim/thesis-template} auf GitHub verfügbar ist. Wenn Sie dieses Template verwenden, werden die meisten der Regeln, die in diesem Kapitel beschrieben werden, automatisch befolgt.
+
 \subsection{Schriftart}
-Die schriftliche Arbeit ist mit einem Computer anzufertigen und in einer für Fließtext geeigneten Schriftart\index{Schriftart} mit Serifen zu erstellen (z.\,B. Times, Palatino, Computer Modern).\footnote{Zur Auswahl der Schrift und ihrer Lesbarkeit siehe \autocite{Willberg1999}, Seite 23ff.} Auf keinen Fall sollte eine serifenlose Schrift (Arial, Helvetica, Verdana, Tahoma, Gil Sans) für den Fließtext eingesetzt werden. Serifenlose Schriften können (und sollen) ausschließlich für Überschriften eingesetzt werden. Es sollen nur zwei verschiedene Schriftarten in der gesamten Arbeit benutzt werden, eine für Überschriften und eine für den Fließtext.
+Die schriftliche Arbeit ist mit einem Computer anzufertigen und in einer für Fließtext geeigneten Schriftart\index{Schriftart} mit Serifen zu erstellen (z.\,B. Times, Palatino, Computer Modern).\footnote{Zur Auswahl der Schrift und ihrer Lesbarkeit siehe \autocite{Willberg1999}, Seite 23ff.} Auf keinen Fall sollte eine serifenlose Schrift (Arial, Helvetica, Verdana, Tahoma, Gil Sans) für den Fließtext eingesetzt werden. Serifenlose Schriften können (und sollen) ausschließlich für Überschriften eingesetzt werden. Generell sollten nur zwei verschiedene Schriftarten in der gesamten Arbeit benutzt werden, eine für Überschriften und eine für den Fließtext.
 
 Die Schriftgröße für den Fließtext beträgt 10, 11 oder 12 Punkt. Fußnoten werden entsprechend 1 bis 2 Punkt kleiner gesetzt.
 
@@ -120,18 +124,23 @@ Die Schriftgröße für den Fließtext beträgt 10, 11 oder 12 Punkt. Fußnoten 
 An den Rändern  ist ausreichend Platz zu lassen. Der seitliche Rand sollte links und rechts mindestens 3 cm, oben und unten mindestens 2 cm betragen.
 \index{Rand}
 
-Der Durchschuss\index{Durchschuss} (Zeilenabstand\index{Zeilenabstand|see{Durchschuss}}) sollte so gewählt werden, dass man den Text gut lesen kann und die Zeilen sich sauber voneinander abheben. Der normale Zeilenabstand (1-fach) ist hierzu bei vielen Schriften zu gering, wählen Sie dann 1,1-fach oder 1,2-fach als Wert.\footnote{Mit Word und der Schriftart Times sind die Zeilen bei 1-fachem Zeilenabstand zu dicht beieinander, hier sollte man 1,1-fach wählen.} 1,5-fach ist fast immer viel zu viel und stört den Lesefluss genauso wie zu geringer Zeilenabstand.
+Den Durchschuss\index{Durchschuss} (Zeilenabstand\index{Zeilenabstand|see{Durchschuss}}) sollten Sie so wählen, dass man den Text gut lesen kann und die Zeilen sich sauber voneinander abheben. Der normale Zeilenabstand (1-fach) ist bei vielen Schriften zu gering, wählen Sie dann 1,1-fach oder 1,2-fach als Wert.\footnote{Mit Word und der Schriftart Times sind die Zeilen bei 1-fachem Zeilenabstand zu dicht beieinander, hier sollte man 1,1-fach wählen.} 1,5-fach ist fast immer viel zu viel und stört den Lesefluss genauso wie zu geringer Zeilenabstand.
 
-Absätze\index{Absatz} sind entweder durch einen entsprechenden Abstand (z.\,B. 2 mm) oder durch einen Einzug zu trennen.
+Absätze\index{Absatz} sind entweder durch einen entsprechenden vertikalem Abstand (z.\,B. 2 mm) oder durch einen Einzug zu trennen. Falsch wäre es, die Absätze sowohl mit Einzug als auch mit vertikalem Abstand zu trennen.
 
 \subsection{Typographie}
 Achten Sie bitte auf die grundlegenden Regeln der Typographie\index{Typographie}\footnote{Ein Ratgeber in allen Detailfragen ist \autocite{Forssman2002}.}, wenn Sie Ihren Text schreiben. Hierzu gehören z.\,B. die Verwendung der richtigen "`Anführungszeichen"' und der Unterschied zwischen Binde- (-) und Gedankenstrich (--).
 
 Wenn Sie Text hervorheben wollen, dann setzten Sie ihn \textit{kursiv} (Italic) und nicht \textbf{fett} (Bold). Fettdruck ist Überschriften vorbehalten; im Fließtext stört er den Lesefluss. Das \underline{Unterstreichen} von Fließtext ist im gesamten Dokument tabu und kann maximal bei Pseudo-Code vorkommen.\index{Hervorhebungen}
 
-Tabellen werden normalerweise ohne vertikale Striche gesetzt, sondern die Spalten werden durch einen entsprechenden Abstand voneinander getrennt.\footnote{Siehe \autocite{Willberg1999}, Seite 89.} Zum Einsatz kommen ausschließlich horizontale Linien (siehe Tabelle~\ref{tabellenbeispiel}).
+Für den Leserschaft sehr hilfreich ist es, wenn Sie einen Begriff bei seiner Definition kursiv setzen. So kann man beim Überfliegen des Dokumentes schnell die Definitionen und Begriffe finden.
+
+Tabellen \ref{tabellenbeispiel} werden normalerweise ohne vertikale Striche gesetzt, sondern die Spalten werden durch einen entsprechenden Abstand voneinander getrennt.\footnote{Siehe \autocite{Willberg1999}, Seite 89.} Zum Einsatz kommen ausschließlich horizontale Linien (siehe Tabelle~\ref{tabellenbeispiel}). Bei Tabellen steht der Titel \textit{über} der Tabelle, bei Abbildungen und Quelltexten darunter.
 
 \begin{table}
+\caption{Beispiel für eine Tabelle}
+\label{tabellenbeispiel}
+\footnotesize
 \centering
 \begin{tabular}{l r r r r r}
 \toprule
@@ -143,19 +152,17 @@ Drucker, grau, VW2 &    300,00 &   5,12 & 230  \\
 Monitor, grau, VW1 &    150,00 &   2,78 & 230  \\
 \bottomrule
 \end{tabular}
-\caption{Beispiel für eine Tabelle}
-\label{tabellenbeispiel}
 \end{table}
 
-Bei den Seitenzahlen sollten Sie den Textteil mit arabischen Ziffern (1, 2, 3, ...) nummerieren, Verzeichnisse aber mit römischen Ziffern (i, ii, iii, iv ...). Das Titelblatt selber bekommt keine Seitenzahl, wird aber mitgezählt, sodass das Inhaltsverzeichnis mit der Seitenzahl ii beginnt.
+Bei den Seitenzahlen sollten Sie den Textteil mit arabischen Ziffern (1, 2, 3, \dots) nummerieren, Verzeichnisse aber mit römischen Ziffern (i, ii, iii, iv \dots). Das Titelblatt selber bekommt keine Seitenzahl, wird aber mitgezählt, sodass das Inhaltsverzeichnis mit der Seitenzahl ii beginnt.
 
 \subsection{Nummerierung der Kapitel}
-Für die Nummerierung der Kapitel empfiehlt sich ein hierarchisches Verfahren mit arabischen Ziffern. Die Kapitel werden beginnend bei 1 nummeriert (1, 2, 3, ...) die Unterkapitel des ersten Kapitels dann entsprechend mit 1.1, 1.2, die des zweiten Kapitels mit 2.1, 2.2, usw.
+Für die Nummerierung der Kapitel empfiehlt sich ein hierarchisches Verfahren mit arabischen Ziffern. Die Kapitel werden beginnend bei 1 nummeriert (1, 2, 3, \dots) die Unterkapitel des ersten Kapitels dann entsprechend mit 1.1, 1.2, die des zweiten Kapitels mit 2.1, 2.2, usw.
 
 Beachten Sie, dass kein Untergliederungspunkt alleine stehen darf, also auf 3.1 muss zwingend auch 3.2 folgen.
 
 \section{Stil, Sprache und Umfang der Arbeit}
-Ihre Arbeit muss so verfasst sein, dass ein fachkundiger Dritter, d.\,h. ein anderer Informatiker oder Ihr Betreuer, in der Lage ist, den Text zu verstehen und die darin enthaltenen Schlüsse nachzuvollziehen. Hierzu gehört insbesondere, dass Sie alle nicht allgemein bekannten Fakten und Erkenntnisse, die Sie verwenden, mit einer entsprechenden Literatur-Stelle belegen, sodass sich der Leser über die Hintergründe informieren kann.
+Ihre Arbeit muss so verfasst sein, dass ein fachkundiger Dritter, d.\,h. ein(e) andere(r) Informatiker*in oder Ihr(e) Betreuer*in, in der Lage ist, den Text zu verstehen und die darin enthaltenen Schlüsse nachzuvollziehen. Hierzu gehört insbesondere, dass Sie alle nicht allgemein bekannten Fakten und Erkenntnisse, die Sie verwenden, mit einer entsprechenden Literatur-Stelle belegen, sodass sich der Leser über die Hintergründe informieren kann.
 \index{Stil}
 \index{Sprache}
 
@@ -165,7 +172,7 @@ Wenn Sie Ihre Arbeit auf Deutsch verfassen, gehen Sie sparsam mit englischen Aus
 
 Selbst bahnbrechende Werke mit einem komplexen wissenschaftlichen Inhalt können in einer gut verständlichen Sprache abgefasst sein, wie z.\,B. die Einleitung von Albert Einsteins epochalem Werk zur speziellen Relativitätstheorie zeigt:
 \begin{quote}\begin{small}
-"`Daß die Elektrodynamik Maxwells -- wie dieselbe gegenwärtig aufgefasst zu werden pflegt -- in ihrer Anwendung auf bewegte Körper zu Asymmetrien führt, welche den Phänomenen nicht anzuhaften scheinen, ist bekannt. Man denke z. B. an die elektrodynamische Wechselwirkung zwischen einem Magneten und einem Leiter. Das beobachtbare Phänomen hängt hier nur ab von der Relativbewegung von Leiter und Magnet, während nach der üblichen Auffassung die beiden Fälle, daß der eine oder der andere dieser Körper der bewegte sei, streng voneinander zu trennen sind. Bewegt sich nämlich der Magnet und ruht der Leiter, so entsteht in der Umgebung des Magneten ein elektrisches Feld von gewissem Energiewerte, welches an den Orten, wo sich Teile des Leiters befinden, einen Strom erzeugt."'\footnote{\autocite{Einstein1905}}
+"`Daß die Elektrodynamik Maxwells -- wie dieselbe gegenwärtig aufgefasst zu werden pflegt -- in ihrer Anwendung auf bewegte Körper zu Asymmetrien führt, welche den Phänomenen nicht anzuhaften scheinen, ist bekannt. Man denke z.\,B. an die elektrodynamische Wechselwirkung zwischen einem Magneten und einem Leiter. Das beobachtbare Phänomen hängt hier nur ab von der Relativbewegung von Leiter und Magnet, während nach der üblichen Auffassung die beiden Fälle, daß der eine oder der andere dieser Körper der bewegte sei, streng voneinander zu trennen sind. Bewegt sich nämlich der Magnet und ruht der Leiter, so entsteht in der Umgebung des Magneten ein elektrisches Feld von gewissem Energiewerte, welches an den Orten, wo sich Teile des Leiters befinden, einen Strom erzeugt."'\footnote{\autocite{Einstein1905}}
 \end{small}\end{quote}
 
 \noindent Jede \ac{ABK}, die Sie benutzen, müssen Sie bei der ersten Verwendung definieren und in ein Abkürzungsverzeichnis am Ende der Arbeit aufnehmen. Davon ausgenommen sind nur \acp{ABK}, die im Duden stehen und bei denen man davon ausgehen kann, dass jeder Leser sie kennt, wie z.\,B. \textit{z.\,B.}
@@ -177,8 +184,8 @@ Man kann aber Durchschnittswerte für den Textteil ohne Anhang angeben, die zumi
 
 \begin{itemize}
 \item Praxissemesterbericht: 20--35 Seiten\index{Umfang!Praxissemesterbericht}
-\item Bachelorarbeit: 50--60 Seiten\index{Umfang!Bachelorarbeit}
-\item Masterarbeit: 60--80 Seiten\index{Umfang!Masterarbeit}
+\item Bachelorarbeit: 50--80 Seiten\index{Umfang!Bachelorarbeit}
+\item Masterarbeit: 60--100 Seiten\index{Umfang!Masterarbeit}
 \end{itemize}
 
 \section{Bestandteile}
@@ -205,12 +212,12 @@ Zusätzlich kann Sie noch enthalten:
 \end{itemize}
 
 \subsection{Verzeichnisse}
-Alle Abbildungen und Tabellen im Text sind durchzunummerieren und dann im entsprechenden Verzeichnis (Abbildungs- oder Tabellenverzeichnis) mit der entsprechenden Nummer aufzuführen. Für die Nummerierung können Sie entweder die Tabellen und Abbildungen fortlaufend nummerieren (1, 2, 3, ...) oder die Kapitelnummer in die Nummerierung mit einbeziehen (1.1, 1.2, 2.1, 2.2, ...).
+Alle Abbildungen und Tabellen im Text sind durchzunummerieren und dann im entsprechenden Verzeichnis (Abbildungs- oder Tabellenverzeichnis) mit der entsprechenden Nummer aufzuführen. Für die Nummerierung können Sie entweder die Tabellen und Abbildungen fortlaufend nummerieren (1, 2, 3, \dots) oder die Kapitelnummer in die Nummerierung mit einbeziehen (1.1, 1.2, 2.1, 2.2, \dots).
 
 Abbildungen und Tabellen haben eigene Nummernkreise, d.\,h. es gibt sowohl eine Tabelle mit der Nummer 1 als auch eine Abbildung mit der Nummer 1.
 
 \subsection{Textteil}
-Der Textteil gliedert sich normalerweise in folgende Abschnitte\index{Textteil!Abschnitte}. Beachten Sie aber bitte, dass die hier gewählten Überschriften zur Orientierung dienen und Sie entsprechend Ihrer Forschungsfrage passende Überschriften für die Kapitel wählen sollten. Auf keinen Fall sollten Sie Ihre Kapitel "`Einleitung"', "`Grundlagen"',"` Problem"', "`Lösungsansatz"' etc. nennen.
+Der Textteil gliedert sich normalerweise in folgende Abschnitte\index{Textteil!Abschnitte}. Beachten Sie aber bitte, dass die hier gewählten Überschriften zur Orientierung dienen und Sie entsprechend Ihrer Forschungsfrage passende Überschriften für die Kapitel wählen sollten. Auf keinen Fall sollten Sie Ihre Kapitel "`Einleitung"', "`Grundlagen"', "`Problem"', "`Lösungsansatz"' etc. nennen.
 
 \begin{itemize}
 \item \textbf{Überblick / Abstract}\index{Abstract} -- Fasst die gesamte Arbeit sehr kurz (weniger als 20 Zeilen) zusammen. Ein Leser sollte durch dieses Kapitel erfahren, worum es in Ihrer Arbeit geht und was Sie herausgefunden haben.
@@ -219,25 +226,25 @@ Der Textteil gliedert sich normalerweise in folgende Abschnitte\index{Textteil!A
 
 \item \textbf{Grundlagen, Definitionen}\index{Grundlagen}\index{Definitionen} -- Erläutern Sie die \textit{Grundlagen} der von Ihnen eingesetzten Methoden und anderer Dinge, die für das Verständnis Ihrer Lösung wichtig sind. Liefern Sie \textit{Definitionen} für alle Begriffe, die nicht allgemein bekannt sind. Belegen Sie Ihre Ausführungen grundsätzlich mit entsprechender Literatur.
 
-\item \textbf{Verwandte Arbeiten}\index{verwandte Arbeiten} -- Gehen Sie auf die \textit{Arbeiten andere Forscher} ein, die Ihr oder ein ähnliches Thema bearbeitet haben. Falls es bereits Arbeiten in Ihrem Gebiet gibt, stellen Sie heraus, worin sich Ihr Ansatz von den anderen unterscheidet, warum Ihre Forschung also trotzdem sinnvoll ist. Bei einer empirischen oder praktischen Arbeit können Sie dieses Kapitel mit dem Grundlagen-Kapitel verschmelzen, bei einer theoretischen Arbeit müssen Sie die Arbeit anderer und den \textit{state of the art} ausführlich diskutieren.
+\item \textbf{Verwandte Arbeiten}\index{verwandte Arbeiten} -- Gehen Sie auf die \textit{Arbeiten andere Forschender} ein, die Ihr oder ein ähnliches Thema bearbeitet haben. Falls es bereits Arbeiten in Ihrem Gebiet gibt, stellen Sie heraus, worin sich Ihr Ansatz von den anderen unterscheidet, warum Ihre Forschung also trotzdem sinnvoll ist. Gehen sie kritisch mit den anderen Arbeiten um. Bei einer empirischen oder praktischen Arbeit können Sie dieses Kapitel mit dem Grundlagen-Kapitel verschmelzen, bei einer theoretischen Arbeit müssen Sie die Arbeit anderer und den \textit{state of the art} ausführlich diskutieren.
 
-\item \textbf{Problem und Lösungsansatz} -- Wenn das Problem, das Sie bearbeitet haben umfangreich ist, und somit nicht vollständig in der Einleitung beschrieben werden konnten, gehen Sie noch einmal detailliert auf das Problem ein. Machen Sie Ihre \textit{Hypothesen} explizit und beschreiben Sie, wie Sie das Problem, unabhängig von der konkreten Implementierung, gelöst haben.
+\item \textbf{Problem und Lösungsansatz} -- Wenn das Problem, das Sie bearbeitet haben, umfangreich ist, und somit nicht vollständig in der Einleitung beschrieben werden konnten, gehen Sie noch einmal detailliert auf das Problem ein. Machen Sie Ihre \textit{Hypothesen} explizit und beschreiben Sie, wie Sie das Problem, unabhängig von der konkreten Implementierung, gelöst haben. Erklären Sie die gefundene Lösung, inklusive Anforderungen, Architektur und Design.
 
 \item \textbf{Implementierung} -- Beschreiben Sie besondere Aspekte der gewählten Implementierung, so Sie bei Ihrer Arbeit eine Implementierung angefertigt haben sollten.
 
-\item \textbf{Zusammenfassung und Ausblick}\index{Zusammenfassung}\index{Ausblick} -- Fassen Sie noch einmal die wichtigsten von Ihnen gewonnenen Erkenntnisse und Ergebnisse zusammen. Ein Leser, der nur Abstract, Einleitung und die Zusammenfassung liest, sollte wissen, was Sie erreicht haben. Wie könnte man das von Ihnen bearbeitete Thema noch weiter bearbeiten? Welche \textit{weiterführenden Arbeiten} würden Sie empfehlen?
+\item \textbf{Zusammenfassung und Ausblick}\index{Zusammenfassung}\index{Ausblick} -- Fassen Sie noch einmal die wichtigsten von Ihnen gewonnenen Erkenntnisse und Ergebnisse zusammen. Leser*innen, die nur Abstract, Einleitung und die Zusammenfassung liest, sollten wissen, was Sie erreicht haben. Wie könnte man das von Ihnen bearbeitete Thema noch weiter bearbeiten? Welche \textit{weiterführenden Arbeiten} würden Sie empfehlen?
 \end{itemize}
 
 \section{Zitate und Quellen}
-Jede Erkenntnis, die Sie nicht selbst im Rahmen der Arbeit gewonnen haben, sondern von anderen Autoren oder Forschern übernommen, müssen Sie mit einer passenden Quelle\index{Quelle} belegen. Zusätzlich sollten Sie immer, wenn Sie einen bestimmten Algorithmus oder Ähnliches einsetzen, auf Literatur verweisen, die diesen genauer beschreibt.
+Jede Erkenntnis, die Sie nicht selbst im Rahmen der Arbeit gewonnen haben, sondern von anderen Autor*innen oder Forscher*innen übernommen, müssen Sie mit einer passenden Quelle\index{Quelle} belegen. Zusätzlich sollten Sie immer, wenn Sie einen bestimmten Algorithmus oder Ähnliches einsetzen, auf Literatur verweisen, die diesen genauer beschreibt.
 
 \subsection{Wörtliche Zitate}
-Wenn Sie Formulierungen wörtlich\index{Zitat!wörtlich} übernehmen, müssen Sie dieses durch Anführungsstriche kennzeichnen. Zitate sind originalgetreu wiederzugeben, wobei Abweichungen genau gekennzeichnet werden müssen. Auslassungen werden durch drei Punkte ... angezeigt. Zusätze innerhalb des zitierten Textes werden in eckige [Klammern] gesetzt. Auch Änderungen an den Auszeichnungen des Textes müssen gekennzeichnet werden.
+Wenn Sie Formulierungen wörtlich\index{Zitat!wörtlich} übernehmen, müssen Sie dieses durch Anführungsstriche kennzeichnen. Zitate sind originalgetreu wiederzugeben, wobei Abweichungen genau gekennzeichnet werden müssen. Auslassungen werden durch drei Punkte \dots angezeigt. Zusätze innerhalb des zitierten Textes werden in eckige [Klammern] gesetzt. Auch Änderungen an den Auszeichnungen des Textes müssen gekennzeichnet werden.
 
 Generell sollten Sie mit wörtlichen Zitaten sparsam umgehen und diese auf wenige Sätze (2--3) beschränken. Längere wörtliche Zitate werden eingerückt dargestellt.
 
 \subsection{Zitierfähigkeit}
-Alles was Sie zitieren\index{Zitat}, muss für den Leser (mit mehr oder weniger Aufwand) beschaffbar sein. Damit scheiden alle Quellen aus, die nicht öffentlich verfügbar sind also auch Diplom- und Bachelor-Arbeiten. Ein besonders Problem stellen dabei Internetquellen dar, da deren Verfügbarkeit nicht garantiert werden kann (siehe unten).
+Alles was Sie zitieren\index{Zitat}, muss für die Leser*innen (mit mehr oder weniger Aufwand) beschaffbar sein. Damit scheiden alle Quellen aus, die nicht öffentlich verfügbar sind also auch Diplom- und Bachelor-Arbeiten. Ein besonders Problem stellen dabei Internetquellen dar, da deren Verfügbarkeit nicht garantiert werden kann (siehe unten).
 
 Beachten Sie auch, dass nicht alle Quellen uneingeschränkt zitierfähig\index{Zitierfähigkeit} sind. Generell können Sie publizierte amtliche oder wissenschaftliche Texte zitieren, einschließlich Dissertationen. Nicht zitieren sollten Sie Tageszeitungen (z.\,B. Bild, Rhein-Neckar-Zeitung, Mannheimer Morgen) und Publikumszeitschriften (z.\,B. Stern, Spiegel).\footnote{Details zu diesen Regeln und eine Begründung finden Sie bei \autocite{Kramer2009}, Seite 141ff.}
 
@@ -249,17 +256,16 @@ In der Informatik ist das Zitieren mit Kurzbelegen\index{Zitat!Kurzbeleg} im Tex
 Denken Sie daran, dass das Übernehmen einer fremden Textstelle ohne entsprechenden Hinweis auf die Herkunft in wissenschaftlichen Arbeiten nicht akzeptabel ist und dazu führen kann, dass die Arbeit nicht anerkannt wird. Plagiate\index{Plagiat!Bewertung} werden mit mangelhaft (5,0) bewertet und können weitere rechtliche Schritte nach sich ziehen.
 
 \subsection{Zitieren von Internetquellen}
-Internetquellen\index{Zitat!Internetquellen} sind normalerweise \textit{nicht} zitierfähig. Zum einen, weil sie nicht dauerhaft zur Verfügung stehen und damit für den Leser möglicherweise nicht beschaffbar sind und zum anderen, weil häufig der wissenschaftliche Anspruch fehlt.\footnote{Eine lesenswerte Abhandlung zu diesem Thema findet sich (im Internet) bei \autocite{Weber2006}}
+Internetquellen\index{Zitat!Internetquellen} sind normalerweise \textit{nicht} zitierfähig. Zum einen, weil sie nicht dauerhaft zur Verfügung stehen und damit für den Leser möglicherweise nicht beschaffbar sind und zum anderen, weil häufig der wissenschaftliche Anspruch fehlt.\footnote{Eine lesenswerte Abhandlung zu diesem Thema findet sich (im Internet) bei \autocite{Weber2006}} Verwenden Sie Internet"=Seiten ausschließlich zu illustrativen Zwecken (z.\,B. um einen Sachverhalt noch etwas genauer zu erläutern), aber nicht zur Faktenvermittlung (z.\,B. um eine Ihrer Thesen zu belegen), außer es gibt keine andere, bessere Quelle.
 
 Wenn ausnahmsweise doch eine Internetquelle zitiert werden muss, z.\,B. weil für eine Arbeit dort Informationen zu einem beschriebenen Unternehmen oder einer Technologie abgerufen wurden, sind folgende Punkte zu beachten:
 
 \begin{itemize}
 \item Die Webseite ist in ein PDF-Dokument zu drucken, damit Sie die Informationen ablegen können,
-\item das Datum des Abrufs und die URL sind anzugeben,
-\item verwenden Sie Internet"=Seiten ausschließlich zu illustrativen Zwecken (z.\,B. um einen Sachverhalt noch etwas genauer zu erläutern), aber nicht zur Faktenvermittlung (z.\,B. um eine Ihrer Thesen zu belegen).
+\item das Datum des Abrufs und die URL sind anzugeben.
 \end{itemize}
 
-Sprechen Sie mit Ihrer Betreuerin bzw. Ihrem Betreuer ab, ob diese die PDFs der Internetquellen mit der Arbeit zusammen abgegeben bekommen möchten. Als Abgabeformat der elektronischen Quellen ist PDF/A\footnote{Bei PDF/A handelt es sich um eine besonders stabile Variante des \ac{PDF}, die von der  \ac{ISO} standardisiert wurde.} vorteilhaft, weil es von allen Formaten die größte Stabilität besitzt.
+Sprechen Sie mit Ihrer Betreuerin bzw. Ihrem Betreuer ab, ob diese die PDFs der Internetquellen mit der Arbeit zusammen abgegeben bekommen möchten. Als Abgabeformat der elektronischen Quellen ist PDF/A\footnote{Bei PDF/A handelt es sich um eine besonders stabile Variante des \ac{PDF}, die von der \ac{ISO} standardisiert wurde.} vorteilhaft, weil es von allen Formaten die größte Stabilität besitzt.
 
 Wikipedia\index{Zitat!Wikipedia} stellt einen immensen Wissensfundus dar und enthält zu vielen Themen hervorragende Artikel. Sie müssen sich aber darüber im Klaren sein, dass die Artikel in Wikipedia einem ständigen Wandel unterworfen sind und nicht als Quelle für wissenschaftliche Fakten genutzt werden sollten. Es gelten die allgemeinen Regeln für das Zitieren von Internetquellen. Sollten Sie doch Wikipedia nutzen müssen, verwenden Sie bitte ausschließlich den Perma"=link\footnote{Sie erhalten den Permalink über die Historie der Seite und einen Klick auf das Datum.}\index{Permalink} zu der Version der Seite, die Sie aufgerufen haben.
 
@@ -278,22 +284,21 @@ Oliver Stengel erläutert in \autocite{Stengel2005} eine ganze Reihe von logisch
      \item Man nimmt an, dass ein Ereignis A ein Ereignis B verursacht hat, weil es vor ihm stattfand (\textit{post hoc ergo propter hoc}). "`Nachdem ich laut geschrien habe, ging der Computer wieder. Mit Schreien repariert man Computer."'
      \item Man glaubt A hätte B verursacht, in Wirklichkeit gibt es aber ein Ereignis C, das beide ausgelöst hat (\textit{Joint Effect}). "`Ich habe vom Fieber eine laufende Nase bekommen."'
      \item A verursacht B, man glaubt aber B habe A verursacht (\textit{Verkehrung von Ursache und Wirkung}). "`Lungenkrebs bringt Menschen dazu zu rauchen."'
-     \item A verursacht zwar B, ist aber vollkommen unbedeutend neben einer weiteren Ursache C (\textit{Insignifikanter Schluss}). "`Wenn ich meinen Ofen einschalte führt das zur globalen Erwärmung."'
+     \item A verursacht zwar B, ist aber vollkommen unbedeutend neben einer weiteren Ursache C (\textit{Insignifikanter Schluss}). "`Wenn ich meinen Ofen einschalte, führt das zur globalen Erwärmung."'
   \end{itemize}
 
 \vspace{0.3cm}\noindent\textbf{Induktive Fehlschluss}\index{Fehlschluss!induktiver} -- Man schließt aus einzelnen Daten auf die Gesamtheit aller Daten. "`Ich habe noch nie einen schwarzen Schwan gesehen, es gibt keine schwarzen Schwäne."'
 
 \vspace{0.3cm}\noindent\textbf{Non-Sequitur}\index{Fehlschluss!Non-Sequitur} -- Aus A folgt B, darum schließt man, dass aus B auch A folgen muss. "`Autos überfahren und töten Wildtiere. Dort liegt ein totes Reh, es muss von einem Auto überfahren worden sein."'
 
-
 \subsection{Falsifikation}
 \index{Falsifikation}
 
 Sie müssen generell unterscheiden zwischen Aussagen bezüglich eines einzelnen Ereignisses oder eines einzelnen Experiments (\textit{besondere Sätze}, \textit{Existenzaussage}\index{Satz!besonderer}\index{Allaussage}) und Hypothesen oder Theorien, die sich auf alle möglichen Experimente oder Ereignisse beziehen (\textit{allgemeine Sätze}, \textit{Allaussage}\index{Satz!allgemeiner}\index{Existenzaussage}).\footnote{Siehe \autocite{Popper1969}, S.3}
 
-In den empirischen Wissenschaften ist es normalerweise nicht möglich einen allgemeinen Satz\index{Allaussage!beweisen} zu beweisen. Sie können z.\,B. kein Experiment konstruieren, das belegt, dass es \textit{keine} Einhörner gibt (Nichtexistenzbeweis). Sie können aber leicht ein Experiment ersinnen, das einen allgemeinen Satz widerlegt\index{Allaussage!widerlegen}. Sie müssen z.\,B. nur ein einziges Einhorn fangen um zu belegen, dass die Allaussage "`es gibt keine Einhörner"' falsch ist.
+In den empirischen Wissenschaften ist es normalerweise nicht möglich einen allgemeinen Satz\index{Allaussage!beweisen} zu beweisen. Sie können z.\,B. kein Experiment konstruieren, das belegt, dass es \textit{keine} Einhörner gibt (Nichtexistenzbeweis). Sie können aber leicht ein Experiment ersinnen, das einen allgemeinen Satz widerlegt\index{Allaussage!widerlegen}. Hier müssen Sie z.\,B. nur ein einziges Einhorn fangen um zu belegen, dass die Allaussage "`es gibt keine Einhörner"' falsch ist.
 
-Da man allgemeine Sätze nicht direkt beweisen kann, versucht man sie zu widerlegen (zu falsifizieren). D.\,h. man leitet aus den allgemeinen Sätzen besondere Sätze ab, die man im Experiment prüft. Mit jedem Experiment, in dem es  nicht gelingt die Allaussage zu widerlegen stärkt das Vertrauen in die Richtigkeit dieser Aussage. Sobald ein Experiment die Allaussage widerlegt hat, muss man sich auf die Suche nach einer neuen und besseren Theorie machen, die auch die Ergebnisse dieses Experiments erklären kann.
+Da man allgemeine Sätze nicht direkt beweisen kann, versucht man sie zu widerlegen (zu falsifizieren). D.\,h. man leitet aus den allgemeinen Sätzen besondere Sätze ab, die man im Experiment prüft. Mit jedem Experiment, in dem es nicht gelingt, die Allaussage zu widerlegen stärkt das Vertrauen in die Richtigkeit dieser Aussage. Sobald ein Experiment die Allaussage widerlegt hat, muss man sich auf die Suche nach einer neuen und besseren Theorie machen, die auch die Ergebnisse dieses Experiments erklären kann.
 
 Als Beispiel kann Newtons Gravitationsgesetz\footnote{Siehe hierzu z.\,B. \autocite{Giancoli2010}, S.177~ff.} gelten. Mit Hilfe dieses Gesetzes kann man Vorhersagen über die Bahnen von Planeten machen, die sehr gut mit den all"-täg"-lich"-en Beobachtungen übereinstimmen. Nichtsdestotrotz kann es die Umlaufbahn des Merkur nicht korrekt vorhersagen, d.\,h. Experimente zur Messung der Merkurbahn (und damit zur Falsifizierung der Newtonschen Gesetze) haben gezeigt, dass Newtons Gravitationsgesetz nicht korrekt sein kann. Erst die allgemeine Relativitätstheorie Albert Einsteins konnte die Abweichungen der Bahn erklären.
 
@@ -307,9 +312,9 @@ Generell spielen viele Kriterien bei der Bewertung einer Abschlussarbeit eine Ro
 Kornmeier stellt in [\autocite{Kornmeier2011}, S. 34] einige Kriterien zusammen, die sich an Inhalt, Stil und Form orientieren, hierbei werden die drei Bereiche unterschiedlich gewichtet:
 
 \begin{itemize}
-  \item Inhalt (ca 70\%)
-  \item Stil (ca 20\%)
-  \item Form (ca 10\%)
+  \item Inhalt (ca 60\%)
+  \item Stil und Form (ca 20\%)
+  \item Arbeitsweise (ca 20\%)
 \end{itemize}
 
 Einen detaillierten Überblick über die von mir angelegten Bewertungskriterien finden Sie unter \textit{Abschlussarbeiten} auf meiner \href{http://www.smits-net.de/files/Bewertungskriterien_Abschlussarbeit.pdf}{Webseite}.
@@ -318,11 +323,11 @@ Einen detaillierten Überblick über die von mir angelegten Bewertungskriterien 
 \section{Software}
 \index{Software}
 
-Es ist Ihnen freigestellt, mit welcher Software Sie die wissenschaftliche Arbeit verfassen. Beachten Sie aber, dass gerade \textit{Microsoft Word} und \textit{OpenOffice Writer} bei Texten mit vielen Formeln oder Fußnoten dazu neigen, Probleme zu verursachen. Wenn Ihre Arbeit viele mathematische Formeln enthält, sollten Sie sich überlegen ob nicht \LaTeX \ für das Schreiben der Arbeit in Frage kommen könnte.\footnote{Sie bekommen \LaTeX \ Distributionen für alle gängigen Betriebssysteme. Auf Windows hat sich MikTeX (\url{http://miktex.org}) bewährt, für MacOS MacTeX (\url{http://www.tug.org/mactex/2011}) und für Linux ist \LaTeX \ Teil aller Distributionen.}
+Es ist Ihnen freigestellt, mit welcher Software Sie die wissenschaftliche Arbeit verfassen. Beachten Sie aber, dass gerade \textit{Microsoft Word} und \textit{OpenOffice Writer} bei Texten mit vielen Formeln oder Fußnoten dazu neigen, Probleme zu verursachen. Wenn Ihre Arbeit viele mathematische Formeln enthält, sollten Sie sich überlegen, ob nicht \LaTeX{} für das Schreiben der Arbeit infrage kommen könnte.\footnote{Sie bekommen \LaTeX{} Distributionen für alle gängigen Betriebssysteme. Auf Windows hat sich MikTeX (\url{http://miktex.org}) bewährt, für MacOS MacTeX (\url{http://www.tug.org/mactex/2011}) und für Linux ist \LaTeX{} Teil aller Distributionen.}
 
 Zum Zeichnen von Diagrammen gibt es eine ganze Reihe von Softwareprodukten, auch sehr viele freie Software. Wenn Sie Funktionen plotten oder statistische Daten grafisch auswerten wollen, empfiehlt sich die freie Software \textit{Gnuplot}\footnote{\url{http://www.gnuplot.info}}. Noch weitgehendere Funktionen bietet das ebenfalls freie \textit{GNU Octave}\footnote{\url{http://www.gnu.org/software/octave}}.
 
-Weiterhin ist es dringend zu empfehlen während der Erstellung der schriftlichen Arbeit ein Versionsverwaltungssystem für die verwendeten Artefakte und die Arbeit selbst zu verwenden. Hierdurch können Sie jederzeit auf ältere Versionen Ihrer Arbeit zurückgehen. Als weitere Sicherheitsmaßnahme sind regelmäßige und an verschiedenen Orten gelagerte Backups zu empfehlen.
+Weiterhin ist es dringend zu empfehlen während der Erstellung der schriftlichen Arbeit ein Versionsverwaltungssystem (z.\,B. git) für die verwendeten Artefakte und die Arbeit selbst zu verwenden. Hierdurch können Sie jederzeit auf ältere Versionen Ihrer Arbeit zurückgehen. Als weitere Sicherheitsmaßnahme sind regelmäßige und an verschiedenen Orten gelagerte Backups zu empfehlen.
 
 
 \newpage
@@ -344,7 +349,13 @@ Weiterhin ist es dringend zu empfehlen während der Erstellung der schriftlichen
 
 \newpage
 \addcontentsline{toc}{section}{Literatur}
+\begingroup
+\cleardoublepage
+\begin{flushleft}
+\let\clearpage\relax % Fix für leere Seiten (issue #25)
 \printbibliography
+\end{flushleft}
+\endgroup
 
 \printindex
 \addcontentsline{toc}{section}{Index}
