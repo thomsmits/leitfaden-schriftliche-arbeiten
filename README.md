@@ -1,3 +1,5 @@
-# Leitfaden für schriftliche Arbeiten
+# Repository moved to Codeberg
 
-Dieses Repository enthält den Quelltext eines Leitfaden für schriftliche Arbeiten. Dieser ist für Studierende der Informatik an der Technischen Hochschule Mannheim entstanden.
+Due to GitHub's AI policy changes and the permanent nudges to use Copilot for my coding, I decided to move away all my repositories from GitHub :broken_heart:. After 16 years on this platform it is time to say goodbye :disappointed:.
+
+The code can now be found at Codeberg: [https://codeberg.org/thomsmits/leitfaden-schriftliche-arbeiten](https://codeberg.org/thomsmits/leitfaden-schriftliche-arbeiten)
